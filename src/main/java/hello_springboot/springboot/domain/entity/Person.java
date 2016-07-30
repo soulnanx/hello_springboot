@@ -1,4 +1,4 @@
-package hello_springboot.springboot.entity;
+package hello_springboot.springboot.domain.entity;
 
 import org.bson.types.ObjectId;
 import org.springframework.data.annotation.Id;
