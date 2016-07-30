@@ -1,6 +1,15 @@
 package hello_springboot.springboot.entity;
 
+import org.bson.types.ObjectId;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
+
+@Document(collection = "person")
 public class Person {
+	
+	@Id
+	private ObjectId idPerson;
+	
 	private String name;
 	private int age;
 	
@@ -15,6 +24,12 @@ public class Person {
 	}
 	public void setAge(int age) {
 		this.age = age;
+	}
+	public ObjectId getIdPerson() {
+		return idPerson;
+	}
+	public void setIdPerson(ObjectId idPerson) {
+		this.idPerson = idPerson;
 	}
 
 }
