@@ -1,4 +1,4 @@
-package hello_springboot.springboot.server;
+package hello_springboot.springboot;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
