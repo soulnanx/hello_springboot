@@ -10,26 +10,27 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import hello_springboot.springboot.domain.entity.Person;
-import hello_springboot.springboot.domain.repository.PersonRepository;
+import hello_springboot.springboot.domain.repository.InstitutionRepository;
+import hello_springboot.springboot.entity.Institution;
 
 
 @RestController
-@RequestMapping("/person")
-public class PersonController {
+@RequestMapping("/institution")
+public class InstitutionController {
 	
 	@Autowired
-	private PersonRepository repository;
+	private InstitutionRepository repository;
 
 	@RequestMapping(method = RequestMethod.GET)
 	@ResponseBody
-	List<Person> index() {
+	List<Institution> index() {
 		return repository.findAll();
 	}
 
 	@RequestMapping(method = RequestMethod.POST)
 	@ResponseBody
 	String person(@RequestBody Person person) {
-		repository.save(person);
+		//repository.save(person);
 		return person.getName();
 	}
 
